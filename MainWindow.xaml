@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoreyMcCrann_S00189165"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListBox x:Name="lbxPhones" HorizontalAlignment="Left" Height="280" VerticalAlignment="Top" Width="302" Margin="68,75,0,0" Loaded="LbxPhones_Loaded" SelectionChanged="LbxPhones_SelectionChanged"/>
-        <TextBlock x:Name="tblkPrices" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="480,75,0,0" Height="69" Width="231"/>
-        <Image x:Name="PhoneImage" HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="231" Margin="502,120,0,0"/>
+        Title="MainWindow" Height="450" Width="800" Background="Red" OpacityMask="#FFC69E9E" BorderBrush="#FF5FBC30">
+    <Grid Background="#FFF7EEEE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="352*"/>
+            <ColumnDefinition Width="45*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbxPhones" HorizontalAlignment="Left" Height="280" VerticalAlignment="Top" Width="302" Margin="68,75,0,0" Loaded="LbxPhones_Loaded" SelectionChanged="LbxPhones_SelectionChanged" BorderBrush="#FF6E727C" Background="#FFDBD2D2"/>
+        <TextBlock x:Name="tblkPrices" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="480,75,0,0" Height="69" Width="231" Grid.ColumnSpan="2"/>
+        <Image x:Name="PhoneImage" HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="231" Margin="502,120,0,0" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

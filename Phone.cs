@@ -21,15 +21,15 @@ namespace CoreyMcCrann_S00189165
 
         public int PhoneID { get; set; }
 
-        /* public void IncreasePrice()
+         public void IncreasePrice()
         {
             decimal percentage = 0;
-            decimal price = 0;
+            decimal price = Price;
 
             price = price * percentage;
 
         }
-        */
+        
 
         public override string ToString()
         {
