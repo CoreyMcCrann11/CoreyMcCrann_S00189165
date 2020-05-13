@@ -20,9 +20,33 @@ namespace CoreyMcCrann_S00189165
     /// </summary>
     public partial class MainWindow : Window
     {
+        PhoneData db = new PhoneData();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LbxPhones_Loaded(object sender, RoutedEventArgs e)
+        {
+            var query = from phones in db.Phones
+                        select phones;
+
+            lbxPhones.ItemsSource = query.ToList();
+
+           
+        }
+
+        private void LbxPhones_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Phone chosenPhone = lbxPhones.SelectedItem as Phone;
+            
+            if (chosenPhone != null)
+            {
+                tblkPrices.Text = $"{chosenPhone.Price}";
+                PhoneImage.Source = new BitmapImage(new Uri(chosenPhone.Phone_Image, UriKind.Relative));
+            }
+
+
         }
     }
 }
